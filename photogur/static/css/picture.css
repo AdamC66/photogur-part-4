@@ -1,0 +1,20 @@
+body{
+    display: block;
+}
+
+header h1{
+    color: grey;
+    opacity: 0.8;
+    display: block;
+    border-bottom: 2px solid black;
+  }
+
+  footer{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }

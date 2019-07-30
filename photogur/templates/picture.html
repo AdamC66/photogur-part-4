@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/picture.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ picture.title }}</h1>
+    <h2>{{ picture.artist }}</h2>
+    <img src="{{ picture.url }}" alt="{{ picture.title }}">
+    <ul>
+    {% for comment in picture.comments.all %}
+        <li>
+            <h4>{{ comment.name }}</h4>
+            <p>{{ comment.message }}</p>
+            <p>{{ comment.created_at }}</p>
+            
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
