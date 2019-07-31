@@ -19,4 +19,12 @@
         </li>
     {% endfor %}
     </ul>
+    <form action="{% url 'create_comment' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="picture" value="{{ picture.pk }}">
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="message" placeholder="Comment"><br>
+        <input type="submit" value="Submit" >
+    </form>
 {% endblock %}
+
